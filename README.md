@@ -2,7 +2,7 @@
 
 Find inspirational quotes that you can up vote or down vote according to your liking. You can also leave your favorite quote and inspire others.
 
-[Check it here]()
+[Live Link](https://halimaprecious.github.io/Quote-vote/)
 
 ## Contributor
 
