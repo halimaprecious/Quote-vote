@@ -1,27 +1,74 @@
-# Quotes
+# Quote-vote
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
+Find the best the inspiring quotes, upvote,downvote, delete or/and add your own quote.
+[Click to view]()
 
-## Development server
+## Contributor
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Precious Halima
 
-## Code scaffolding
+## Technologies used
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Javascript
+2. CSS
+3. HTML
+4. Bootstrap
+5. Typescript
 
-## Build
+### Requirements
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+NodeJs and Angular installed or an IDE with the same functionality. VS Code is a great choice.
 
-## Running unit tests
+### Setup and instruction
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Clone the repository [here]().
+2. Extract and open the folder.
+3. Run **ng serve --open** from the console.
+4. Navigate to `http://localhost:4200/` on your preferred browser.
 
-## Running end-to-end tests
+## Behaviour Driven Development
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+BDD focuses on how the user will interact with the application.
 
-## Further help
+What you will see and experience:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. Landing page with several quotes on sticky notes tilted for effects.
+2. Hover or focus on the note to remove the tilting effect; read effectively.<br>
+    Note - Quote, Author, Upvote and Downvote are displayed.
+3. Click on the **Upvote button** to up vote and **Downvote button** to down vote.<br> 
+    This increments the value adjascent.<br>
+    **NB** The quote with the most votes is highlighted in Orange.
+4. Click on View more to display:
+    - Uploaded By - name of the person who uploaded the quote.
+    - Delete button - Removes the Quote from display.
+    - How many days have passed since the quote was added.
+
+5. At the bottom is an add quote form.<br> 
+    Enter your name, Quote and Author to create a new quote on submit.<br>
+    The form throws errors below the inputs for empty values and cannot submit an empty form.
+6. Click on the Reload to Clear the form.
+
+## Development
+
+To fix a bug or enhance an existing module, follow these steps:
+- Fork the repo
+- Create a new branch (git checkout -b improve-feature)
+- Make the appropriate changes in the files
+- Add changes to reflect the changes made
+- Commit your changes (git commit -am 'Improve feature')
+- Push to the branch (git push origin improve-feature)
+- Create a Pull Request
+
+## Known Bugs
+
+If you find a bug or would like to request a new function, reach out to me via Email: halimaprecious3@gmail.com or on [LinkedIn](https://www.linkedin.com/in/precious-halima)
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+Copyright (c) 2022   Precious Halima
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
