@@ -8,19 +8,41 @@
 <div class="row mt-4">
   <ul>
     <li *ngFor="let quote of quotes; let i= index">
+<!-- checkt for highest up votes -->
+<div *ngIf="quote.upVote == highest; then best else less"></div>
+<!-- display best quote -->
+<ng-template #best>
+    <a href="#">
+      <p class="show"appHighlight>"{{quote.quote}}"</p>
+      <small class="text-muted">-{{ quote.author }}</small><hr>
+        <span><button class="btn btn-success" (click)='upVoteQuote(i)'>Upvote {{quote.upVote}}</button></span>
+         <span class="down"><button class="btn btn-warning" style="float:right" (click)='downVoteQuote(i)'> Downvote
+            {{quote.downVote}}</button></span>
+      <!-- display details -->
+      <p class="more" (click)="toggleDetails(i)">See Details
+      </p>
+      <div *ngIf="quote.showDetails">
+        <app-quote-details [quote]='quote' (isComplete)="quoteDelete($event,i)"></app-quote-details>
+      </div>
+    </a>
+</ng-template>
+<!-- other quotes -->
+<ng-template #less>
+  <a href="#">
+    <p class="show mt-2">"{{quote.quote}}"<br><small class="text-muted">-{{ quote.author }}</small> </p><hr>
+      <span><button class="btn btn-success" (click)='upVoteQuote(i)'>Upvote {{quote.upVote}}</button></span>
+       <span class="down"><button class="btn btn-warning" style="float:right" (click)='downVoteQuote(i)'> Downvote
+          {{quote.downVote}}</button></span>
+    <!-- display details -->
+    <p class="more" (click)="toggleDetails(i)">See Details
+    </p>
+    <div *ngIf="quote.showDetails">
+      <app-quote-details [quote]='quote' (isComplete)="quoteDelete($event,i)"></app-quote-details>
+    </div>
+  </a>
+</ng-template>
 
-      <a href="#">
-        <p class="mt-2">"{{quote.quote}}"<br><small class="text-muted">-{{ quote.author }}</small> </p><hr>
-          <span><button class="btn btn-success" (click)='upVoteQuote(i)'>Upvote {{quote.upVote}}</button></span>
-           <span class="down"><button class="btn btn-warning" style="float:right" (click)='downVoteQuote(i)'> Downvote
-              {{quote.downVote}}</button></span>
-        <!-- display details -->
-        <p class="more" (click)="toggleDetails(i)">See Details
-        </p>
-        <div *ngIf="quote.showDetails">
-          <app-quote-details [quote]='quote' (isComplete)="quoteDelete($event,i)"></app-quote-details>
-        </div>
-      </a>
+  
     </li>
   </ul>
   
