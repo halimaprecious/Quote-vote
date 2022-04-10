@@ -1,1 +1,31 @@
-<p>quote works!</p>
+<div class="container">
+  <h1 class="text-center">Inspirational Quotes</h1>
+  <marquee behavior="scroll" direction="left" scrollamount="8">
+    <h2 class="text">Upvote the best quote, downvote the least favorite quote & inpire others with your sticky quote!!</h2>
+  </marquee>
+</div>
+<!-- sticky quote section -->
+<div class="row mt-4">
+  <ul>
+    <li *ngFor="let quote of quotes; let i= index">
+
+      <a href="#">
+        <p class="mt-2">"{{quote.quote}}"<br><small class="text-muted">-{{ quote.author }}</small> </p><hr>
+          <span><button class="btn btn-success" (click)='upVoteQuote(i)'>Upvote {{quote.upVote}}</button></span>
+           <span class="down"><button class="btn btn-warning" style="float:right" (click)='downVoteQuote(i)'> Downvote
+              {{quote.downVote}}</button></span>
+        <!-- display details -->
+        <p class="more" (click)="toggleDetails(i)">See Details
+        </p>
+        <div *ngIf="quote.showDetails">
+          <app-quote-details [quote]='quote' (isComplete)="quoteDelete($event,i)"></app-quote-details>
+        </div>
+      </a>
+    </li>
+  </ul>
+  
+
+<!-- form -->
+<div id="frm">
+  <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+</div>

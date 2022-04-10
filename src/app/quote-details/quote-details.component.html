@@ -1,1 +1,10 @@
-<p>quote-details works!</p>
+<div class="row details">
+    <p class="write">Submitted by: {{quote.writer}}</p>
+  <!-- date count -->
+  <div class="text">
+    <p class="days-old">Submitted {{quote.creationDate|dateCount}} ago.
+      <span> <button class="btn btn-danger" style="float:right" (click)="quoteDelete(true)">Delete</button></span>
+    </p>
+  </div>
+
+</div>
