@@ -5,17 +5,17 @@ export class Quote {
     quote!:string;
     author!:string;
     creationDate!:Date;
-    upvote!:number;
-    downvote!:number
+    upVote!:number;
+    downVote!:number
 
     constructor(id:number, writer:string, quote: string, author:string, creationDate:Date, upvote: number, downvote: number){
         this.id =id;
         this.writer= writer;
         this.quote = quote;
         this.author =author;
-        this.upvote = upvote;
+        this.upVote = upvote;
         this.creationDate =creationDate;
-        this.downvote = downvote;
+        this.downVote = downvote;
         this.showDetails =false;
     }
 }
