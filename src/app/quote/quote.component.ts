@@ -9,12 +9,12 @@ export class QuoteComponent implements OnInit {
 
 // new instance of a quote
 quotes: Quote[]=[
-  new Quote(1,"Paul","You can have it all.Just not all at once.","Oprah Winfrey",new Date(1999,5,7),15 ,1,),
-  new Quote(2,"Rick","Beause paper has more patience than people.", "Anonymous",new Date(2012,5,3),9 , 2),
-  new Quote(3,"Darleen","The best way to predict the future is to create it.","Abraham Lincon", new Date(2019,9,2), 20 , 0),
-  new Quote(4,"Milly","Take every chance drop every fear.", "Martin Luther",new Date(2021,2,2) ,33, 5),
-  new Quote(5,"Dolly","There can be miracles when you believe.", "Whitney Houston",new Date(2007,2,2) ,60, 1),
-  new Quote(6,"Pam","Magic is believing in yourself.","Anonymous",new Date(2021,2,2) ,40, 2),
+  new Quote(1,"Paul","You can have it all.Just not all at once.","Oprah Winfrey",new Date(1999,5,7),0 ,0,),
+  new Quote(2,"Rick","Beause paper has more patience than people.", "Anonymous",new Date(2012,5,3),0, 0),
+  new Quote(3,"Darleen","The best way to predict the future is to create it.","Abraham Lincon", new Date(2019,9,2), 0 , 0),
+  new Quote(4,"Milly","Take every chance drop every fear.", "Martin Luther",new Date(2021,2,2) ,0, 0),
+  new Quote(5,"Dolly","There can be miracles when you believe.", "Whitney Houston",new Date(2007,2,2) ,0, 0),
+  new Quote(6,"Pam","Magic is believing in yourself.","Anonymous",new Date(2021,2,2) ,0, 0),
 ];
 // delete button
 quoteDelete(isComplete: boolean, index:number ){
