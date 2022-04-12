@@ -16,6 +16,7 @@ quotes: Quote[]=[
   new Quote(5,"Dolly","There can be miracles when you believe.", "Whitney Houston",new Date(2007,2,2) ,0, 0),
   new Quote(6,"Pam","Magic is believing in yourself.","Anonymous",new Date(2021,2,2) ,0, 0),
 ];
+highest!:number;
 // delete button
 quoteDelete(isComplete: boolean, index:number ){
   if (isComplete){
@@ -32,8 +33,10 @@ toggleDetails(index:number){
 }
 //upvote logic
 upVoteQuote(index: number){
-  var up=this.quotes[index].upVote+1;
-  this.quotes[index].upVote=up;
+  this.quotes[index].upVote++;
+  // this.quotes[index].upVote=up;
+  let arr:number[]=this.quotes.map(quotes=>quotes.upVote);
+ this.highest =Math.max(...arr);
 }
 //downvote logic
 downVoteQuote(index:  number){
@@ -47,12 +50,20 @@ quotes.id = quoteLength+1;
 this.quotes.push(quotes)
 }
 //quote with highest upvotes
-arr:number[]=this.quotes.map(quotes=>quotes.upVote);
-highest =Math.max(...this.arr);
+
 
   constructor() { }
 
   ngOnInit(): void {
   }
-
+ //fucntion for showing highest quoteuovote
+      // //highlightHighest (){ 
+      //   //let quote Upvote = [] 
+      //   let highest UpVote: number 
+      //   for (let j = 0; j < this.quote.length; j++)
+      //   { quote Upvote.push(this.quote[j].upVote) 
+      //   } quote Upvote.sort(function (a, b){ return b - a })
+      //    highest UpVote =quote Upvote[0] 
+      //    //return highestUpVote; }
+  
 }

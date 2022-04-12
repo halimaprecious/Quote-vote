@@ -1,15 +1,15 @@
 <div class="container">
   <h1 class="text-center">Inspirational Quotes</h1>
   <marquee behavior="scroll" direction="left" scrollamount="8">
-    <h2 class="text">Upvote the best quote, downvote the least favorite quote & inpire others with your sticky quote!!</h2>
+    <h2 class="text" >Upvote the best quote, downvote the least favorite quote & inpire others with your sticky quote!!</h2>
   </marquee>
 </div>
 <!-- sticky quote section -->
 <div class="row mt-4">
   <ul>
     <li *ngFor="let quote of quotes; let i= index">
-<!-- checkt for highest up votes -->
-<div *ngIf="quote.upVote == highest; then best else less"></div>
+<!-- check for highest up votes -->
+<div *ngIf="quote.upVote == highest && quote.upVote >0; then best else less"></div>
 <!-- display best quote -->
 <ng-template #best>
     <a href="#">

@@ -28,7 +28,7 @@
         </div><br>
         <div class="row">
             <div class="col">
-                <button type="submi" class="btn btn-success form-btn">Submit</button>
+                <button [disabled]="Form.invalid" type="submit" class="btn btn-success form-btn">Submit</button>
             </div>
             <div class="col">
                 <button type="reset" (click)="clearQuoteForm(Form)"
